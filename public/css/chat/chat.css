@@ -1,0 +1,60 @@
+    /**
+    * styles generales del chat
+    */
+    .chat-send-btn:hover {
+        background-color: #0d6efd !important;
+        color: white !important;
+        transition: background-color 0.3s ease;
+    }
+
+    .icon-btn:hover i {
+        transform: scale(1.1);
+    }
+
+    .icon-btn:focus {
+        box-shadow: none !important;
+    }
+
+    /**
+    * animacion chat
+    */
+    .chat-message {
+        animation: fadeInUp 0.25s ease;
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* *
+    * animation de btn limpiar
+     */
+    .btn-pulso:hover {
+        color: #fc2929 !important;
+        transform: scale(1.25);
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+            filter: brightness(1);
+        }
+
+        50% {
+            transform: scale(1.18);
+            filter: brightness(1.25);
+        }
+
+        100% {
+            transform: scale(1);
+            filter: brightness(1);
+        }
+    }

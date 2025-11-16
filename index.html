@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="/public/css/principal/principal.css">
+    <link rel="stylesheet" href="/public/css/chat/chat.css">
+    <title>BIENVENIDO A SOYLION IA</title>
+</head>
+
+<body
+    style="background: radial-gradient(circle at center, rgba(255, 255, 255, 0.7) 0%, transparent 80%), linear-gradient(160deg, #0044ff 0%, #1aa7ff 50%, #fff6a2 100%); background-repeat: no-repeat; background-attachment: fixed; background-size: cover; background-position: center; min-height: 100vh;">
+    <div class="container d-flex justify-content-center vh-100">
+        <main class="text-center mt-3">
+            <div class="d-flex flex-column align-items-center">
+                <div class="mb-4 d-flex align-items-center justify-content-center paco-IA-logo-pulso"
+                    style="background: linear-gradient(145deg, #0421ff, #43adc8); width: 120px; height: 120px; border-radius: 50%; box-shadow: 0 8px 25px rgba(100, 70, 255, 0.25); color: white; animation: paco-IA-logo-pulso 2s infinite;">
+                    <i class="bi bi-stars" style="font-size: 3rem;"></i>
+                </div>
+
+                <div>
+                    <h1 class="fw-bold text-dark"
+                        style="font-size: 3rem; font-family: 'Times New Roman', Times, serif;">
+                        SOYLION <span class="text-primary">Al</span>
+                    </h1>
+                </div>
+
+                <div>
+                    <p class="text-muted py-3" style="font-size: 1.3rem; font-family: 'Times New Roman', Times, serif;">
+                        Tu asistente virtual inteligente
+                    </p>
+                </div>
+
+                <div class="d-flex justify-content-center align-items-center my-4 w-100 px-3">
+                    <div class="input-group shadow"
+                        style=" max-width: 700px; width: 500%; border-radius: 50px; overflow: hidden;">
+                        <input id="indexChatInput" type="text" class="form-control border-0 ps-4 py-3"
+                            placeholder="Escribe tu pregunta aquí..."
+                            style="font-size: 1.5rem; border-top-left-radius: 50px; border-bottom-left-radius: 50px;">
+                        <button id="btnChatEnviar" class="btn px-4 btnChatEnviar" type="button"
+                            style="background: #f5f5f8; border-top-right-radius: 50px; border-bottom-right-radius: 50px;">
+                            <i class="fa-solid fa-paper-plane text-secondary icon-btn-enviar"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div>
+                    <p class="text-center text-muted mt-3">O prueba con estas preguntas:</p>
+                </div>
+
+                <div class="my-4">
+                    <div class="d-flex flex-wrap justify-content-center">
+                        <button class="btn border-dark m-2 px-4 py-2 fw-semibold btn-gradient"
+                            style="border-radius: 50px;  transition: all 0.4s ease;">
+                            ¿Cómo funcionas?
+                        </button>
+
+                        <button class="btn border-dark m-2 px-4 py-2 fw-semibold btn-gradient"
+                            style="border-radius: 50px;  transition: all 0.4s ease;">
+                            Cuéntame algo interesante
+                        </button>
+
+                        <button class="btn border-dark m-2 px-4 py-2 fw-semibold text-wrap btn-gradient"
+                            style="border-radius: 50px; max-width: 300px;  transition: all 0.4s ease;">
+                            No conozco a SOYLION
+                        </button>
+                    </div>
+                </div>
+
+                <div class="my-4">
+                    <div class="row justify-content-center g-4 my-2">
+                        <div class="col-12 col-md-4">
+                            <div class="border border-dark rounded-2 p-4 h-100 text-center bg-opacity-75 cart-gradient"
+                                style="transition: all 0.4s ease;">
+                                <i class="fa-solid fa-brain fa-2x mb-3 text-primary"></i>
+                                <h3 class="fw-bold">IA Avanzada</h3>
+                                <p>Respuestas inteligentes y contextuales</p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-4">
+                            <div class="border border-dark rounded-2 p-4 h-100 text-center bg-opacity-75 cart-gradient"
+                                style="transition: all 0.4s ease;">
+                                <i class="fa-solid fa-map-location-dot fa-2x mb-3 text-success"></i>
+                                <h3 class="fw-bold">Guía de SOYLION</h3>
+                                <p>Llega a tu lugar deseado en segundos, sin preocupaciones</p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-4">
+                            <div class="border border-dark rounded-2 p-4 h-100 text-center bg-opacity-75 cart-gradient"
+                                style="transition: all 0.4s ease;">
+                                <i class="fa-solid fa-user fa-2x mb-3 text-warning"></i>
+                                <h3 class="fw-bold">Personalizado</h3>
+                                <p>Adaptado a tus necesidades</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="containerChat" class="d-none"></div>
+
+        </main>
+    </div>
+
+    <!--*********** script.js ***********-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/public/js/principal/pincipal.js"></script>
+
+</body>
+
+
+</html>
