@@ -1,151 +1,67 @@
-/* *
-*  css general del chat
-*/
-
-#chatBox .card-header {
-    position: sticky;
-    top: 0;
-    z-index: 20;
+/* Chat flotante base */
+#chatBox {
+    width: 80vw;
+    height: 90vh;
+    border-radius: 1rem;
 }
 
-#chatInputBar {
-    position: sticky;
-    bottom: 0;
-    z-index: 30;
+/* Container general */
+#contentChat {
+    inset: 0;
+    /* top:0; left:0; right:0; bottom:0; */
 }
 
+/* Área de mensajes ajustable */
 #contentChatMessages {
-    padding-bottom: 90px;
+    height: calc(100vh - 160px) !important;
+    /* Header + Input = 160px aprox */
 }
 
-@media (max-width: 768px) {
+/* Input bar estable (iPhone SAFE) */
+#chatInputBar {
+    position: fixed !important;
+    bottom: 0;
+    left: 0;
+    width: 100vw !important;
+    background: #111;
+    padding: 12px;
+    z-index: 3000;
+}
+
+/* PC + tablets grandes: diseño original */
+@media (min-width: 769px) {
+    #chatInputBar {
+        position: absolute !important;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+    }
+
+    #chatBox {
+        width: 80vw;
+        height: 90vh;
+        border-radius: 1rem;
+    }
+
     #contentChatMessages {
-        height: calc(100vh - 160px) !important;
-        padding-bottom: 120px;
+        height: calc(90vh - 160px) !important;
     }
 }
 
-
-
-.chat-send-btn:hover {
-    background-color: #0d6efd !important;
-    color: #fff !important;
-    transition: background-color .3s ease;
-}
-
-.icon-btn:hover i {
-    transform: scale(1.1);
-}
-
-.icon-btn:focus {
-    box-shadow: none !important;
-}
-
-.chat-message {
-    animation: fadeInUp .25s ease;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.btn-pulso:hover {
-    color: #fc2929 !important;
-    transform: scale(1.25);
-}
-
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-        filter: brightness(1);
-    }
-
-    50% {
-        transform: scale(1.18);
-        filter: brightness(1.25);
-    }
-
-    100% {
-        transform: scale(1);
-        filter: brightness(1);
-    }
-}
-
-
-/* *
-*  para Tablets
-*/
-@media (max-width: 992px) {
-    #chatBox {
-        width: 90vw !important;
-        height: 90vh !important;
-    }
-}
-
-
-/* *
-*  para celulares (ESTILO WHATSAPP)
-*/
+/* Móviles: modo pantalla completa estilo WhatsApp */
 @media (max-width: 768px) {
-
     #chatBox {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
         width: 100vw !important;
         height: 100vh !important;
         border-radius: 0 !important;
+        transform: none !important;
     }
 
     #contentChatMessages {
-        height: 70vh !important;
-        scroll-behavior: smooth;
-        padding-bottom: 80px;
-    }
-
-    /* Input estilo WhatsApp */
-    .input-group {
-        width: 100% !important;
-        max-width: 100% !important;
-    }
-
-    #chatInput {
-        font-size: 1rem !important;
-        padding: 12px !important;
-    }
-
-    #btnEnviar {
-        padding: 14px !important;
-    }
-
-    .btn-pulso {
-        position: fixed !important;
-        right: 2% !important;
-        top: 10% !important;
-    }
-}
-
-
-/* *
-* para celulares pequeños
-*/
-@media (max-width: 480px) {
-    .d-flex.gap-3 {
-        gap: 8px !important;
-    }
-
-    .input-group input {
-        font-size: .85rem !important;
-    }
-
-    #btnFlotante {
-        width: 50px !important;
-        height: 50px !important;
-        padding: 0 !important;
+        height: calc(100vh - 160px) !important;
     }
 }
