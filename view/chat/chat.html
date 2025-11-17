@@ -1,6 +1,6 @@
 <button id="btnFlotante"
-    class="btn btn-primary rounded-circle shadow-lg position-fixed bottom-0 end-0 m-4 p-3 paco-IA-logo-pulso"
-    style="width: 60px; height: 60px; z-index: 1050; animation: paco-IA-logo-pulso 2s infinite;">
+    class="btn btn-primary rounded-circle shadow-lg position-fixed bottom-0 end-0 m-4 p-3 IA-logo-pulso"
+    style="width: 60px; height: 60px; z-index: 1050; animation: IA-logo-pulso 2s infinite;">
     <i class="fa-solid fa-comments fa-lg text-white"></i>
 </button>
 
@@ -10,12 +10,13 @@
         style="width: 80vw; height: 90vh; border-radius: 1rem; overflow: hidden;">
 
         <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center py-3 px-4"
-            style="background: linear-gradient(145deg, #0421ff, #43adc8);">
+            style="background: linear-gradient(145deg, #2a2b30, #93a6ab);">
             <div class="d-flex flex-column">
                 <div class="d-flex align-items-center gap-3">
-                    <div class="d-flex align-items-center justify-content-center paco-IA-logo"
-                        style="background: linear-gradient(145deg, #0421ff, #43adc8); width: 40px; height: 40px; border-radius: 50%; box-shadow: 0 8px 25px rgba(100, 70, 255, 0.25); color: white; animation: paco-IA-logo-pulso 2s infinite;">
-                        <i class="bi bi-stars" style="font-size: 1.1rem;"></i>
+                    <div class="d-flex align-items-center justify-content-center IA-logo">
+                        <img src="../../img/soylioon.png"
+                            style="border-radius: 50%; width: 40px; height: 40px; animation: IA-logo-pulso 2s infinite;"
+                            width: 120px; alt="">
                     </div>
                     <div class="d-flex flex-column" style="line-height: 1;">
                         <strong style="font-size: 1.1rem;">Chat SOYLION AI</strong>
@@ -40,7 +41,7 @@
         </div>
 
         <div id="contentChatMessages" class="card-body bg-dark text-white d-flex flex-column gap-3 overflow-auto"
-            style="height: 70vh; background: radial-gradient(circle at center, rgba(255, 255, 255, 0.10) 0%, transparent 60%), linear-gradient(160deg, #0044ff 0%, #1aa7ff 50%, #59fdf3 100%); background-repeat: no-repeat; background-attachment: fixed; background-size: cover; background-position: center;">
+            style="height: 70vh; background: radial-gradient(circle at center, rgba(255, 255, 255, 0.10) 0%, transparent 60%), linear-gradient(145deg, #2a2b30, #93a6ab); background-repeat: no-repeat; background-attachment: fixed; background-size: cover; background-position: center;">
             <div id="bienvenidaChat" class="text-center small text-white mt-3 position-relative">
                 Bienvenido a soylio IA
                 <button id="btnLimpiarChat" class="btn text-white position-fixed btn-pulso"
@@ -59,10 +60,12 @@
         </div>
 
         <div class="position-sticky bottom-0 p-3"
-            style="z-index: 10; background: linear-gradient(145deg, #0421ff, #43adc8);">
+            style="z-index: 10; background: linear-gradient(145deg, #2a2b30, #93a6ab);">
             <div class="d-flex justify-content-center align-items-center gap-3">
                 <div class="d-flex gap-2">
-                    <button class="btn border-0 p-2 icon-btn" style="transition: all 0.2s ease-in-out;">
+                    <input type="file" id="inputArchivo" hidden>
+                    <button id="btnSelectArchivo" class="btn border-0 p-2 icon-btn"
+                        style="transition: all 0.2s ease-in-out;">
                         <i class="fa-solid fa-paperclip text-white"></i>
                     </button>
                     <button class="btn border-0 p-2 icon-btn" style="transition: all 0.2s ease-in-out;">

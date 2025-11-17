@@ -57,6 +57,19 @@ function inicializarChat() {
 
 
     /* *
+    *  selecionar archivo 
+    */
+    document.getElementById('btnSelectArchivo').addEventListener('click', function () {
+        document.getElementById('inputArchivo').click();
+    });
+
+    document.getElementById('inputArchivo').addEventListener('change', function () {
+        if (this.files.length > 0) {
+            console.log("Archivo seleccionado:", this.files[0].name);
+        }
+    });
+
+    /* *
      *  limpiar chat
      */
     btnLimpiarChat.addEventListener("click", () => {

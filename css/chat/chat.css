@@ -58,3 +58,89 @@
             filter: brightness(1);
         }
     }
+
+
+    /* Botón flotante */
+    #btnFlotante {
+        width: 60px;
+        height: 60px;
+    }
+
+    @media (max-width: 480px) {
+        #btnFlotante {
+            width: 50px;
+            height: 50px;
+            padding: 0.8rem;
+        }
+    }
+
+    /* Caja principal del chat */
+    #chatBox {
+        width: 80vw;
+        height: 90vh;
+    }
+
+    @media (max-width: 768px) {
+        #chatBox {
+            width: 95vw !important;
+            height: 95vh !important;
+            border-radius: 0.7rem !important;
+        }
+    }
+
+    /* Header: avatar + texto */
+    @media (max-width: 480px) {
+        #chatBox .card-header img {
+            width: 32px !important;
+            height: 32px !important;
+        }
+
+        #chatBox .card-header strong {
+            font-size: 0.95rem !important;
+        }
+
+        #chatBox .card-header span {
+            font-size: 0.7rem !important;
+        }
+
+        #cerrarChat {
+            padding: 3px 6px !important;
+            font-size: 0.75rem !important;
+        }
+    }
+
+    /* Contenedor de mensajes */
+    #contentChatMessages {
+        height: 70vh;
+    }
+
+    @media (max-width: 768px) {
+        #contentChatMessages {
+            height: calc(100vh - 150px) !important;
+        }
+    }
+
+    /* Input del mensaje */
+    .input-group {
+        width: 600px;
+        max-width: 90%;
+    }
+
+    @media (max-width: 480px) {
+        #chatInput {
+            font-size: 0.9rem !important;
+            padding-left: 1rem !important;
+        }
+
+        .chat-send-btn {
+            padding: 0.7rem 1rem !important;
+        }
+    }
+
+    /* Botón limpiar */
+    @media (max-width: 480px) {
+        #btnLimpiarChat {
+            top: 16% !important;
+            right: 4% !important;
+        }
+    }
