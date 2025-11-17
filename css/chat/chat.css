@@ -1,23 +1,33 @@
-/* Chat flotante base */
+/* *
+* Chat flotante base
+*/
 #chatBox {
     width: 80vw;
     height: 90vh;
     border-radius: 1rem;
 }
 
-/* Container general */
+/** 
+* Container general 
+*/
 #contentChat {
     inset: 0;
-    /* top:0; left:0; right:0; bottom:0; */
 }
 
-/* Área de mensajes ajustable */
+/**
+* mensajes general 
+*/
 #contentChatMessages {
-    height: calc(100vh - 160px) !important;
-    /* Header + Input = 160px aprox */
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 70px - 90px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 15px;
 }
 
-/* Input bar estable (iPhone SAFE) */
 #chatInputBar {
     position: fixed !important;
     bottom: 0;
@@ -26,30 +36,40 @@
     background: #111;
     padding: 12px;
     z-index: 3000;
+    height: 90px;
 }
 
-/* PC + tablets grandes: diseño original */
+/**
+* diseño original 
+*/
 @media (min-width: 769px) {
+    #chatBox {
+        width: 80vw;
+        height: 90vh;
+        border-radius: 1rem;
+        position: absolute !important;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
     #chatInputBar {
         position: absolute !important;
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
         width: 100%;
-    }
-
-    #chatBox {
-        width: 80vw;
-        height: 90vh;
-        border-radius: 1rem;
+        height: auto;
     }
 
     #contentChatMessages {
-        height: calc(90vh - 160px) !important;
+        height: calc(90vh - 70px - 90px);
     }
 }
 
-/* Móviles: modo pantalla completa estilo WhatsApp */
+/* *
+* para moviles
+*/
 @media (max-width: 768px) {
     #chatBox {
         position: fixed !important;
@@ -61,7 +81,11 @@
         transform: none !important;
     }
 
+    #chatInputBar {
+        height: 90px !important;
+    }
+
     #contentChatMessages {
-        height: calc(100vh - 160px) !important;
+        height: calc(100vh - 70px - 90px) !important;
     }
 }

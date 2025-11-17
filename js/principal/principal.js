@@ -137,7 +137,10 @@ function inicializarChat() {
                 </div>`;
         }
 
-        contentChatMessages.insertBefore(wrapper, mostrarEscribiendoDiv);
+        /*  contentChatMessages.insertBefore(wrapper, mostrarEscribiendoDiv);
+         contentChatMessages.scrollTop = contentChatMessages.scrollHeight; */
+
+        contentChatMessages.appendChild(wrapper);
         contentChatMessages.scrollTop = contentChatMessages.scrollHeight;
 
         if (guardar) {
@@ -234,26 +237,5 @@ function inicializarChat() {
     /* *
     *  para q se adate a disposivos moviles 
     */
-    if (window.visualViewport) {
-        visualViewport.addEventListener("resize", () => {
-            const chat = document.getElementById("chatBox");
-
-            if (visualViewport.height < window.innerHeight) {
-                // teclado abierto
-                chat.style.height = visualViewport.height + "px";
-            } else {
-                // teclado cerrado
-                chat.style.height = "100vh";
-            }
-        });
-    }
-
-    document.getElementById("chatInput").addEventListener("focus", () => {
-        setTimeout(() => {
-            const msgs = document.getElementById("contentChatMessages");
-            msgs.scrollTop = msgs.scrollHeight;
-        }, 100);
-    });
-
 
 }
