@@ -8,6 +8,24 @@
     z-index: 20;
 }
 
+#chatInputBar {
+    position: sticky;
+    bottom: 0;
+    z-index: 30;
+}
+
+#contentChatMessages {
+    padding-bottom: 90px;
+}
+
+@media (max-width: 768px) {
+    #contentChatMessages {
+        height: calc(100vh - 160px) !important;
+        padding-bottom: 120px;
+    }
+}
+
+
 
 .chat-send-btn:hover {
     background-color: #0d6efd !important;

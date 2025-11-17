@@ -5,8 +5,9 @@
 
 <div id="contentChat" class="position-fixed top-0 start-0 w-100 h-100 d-none"
     style="background-color: rgba(0, 0, 0, .7); z-index:1051;">
+
     <div id="chatBox" class="card shadow-lg position-absolute top-50 start-50 translate-middle"
-        style="width:80vw; height:90vh; border-radius:1rem; overflow:hidden;">
+        style="width:80vw; height:90vh; border-radius:1rem; overflow:hidden; z-index:2000;">
 
         <div class="card-header text-white d-flex justify-content-between align-items-center py-3 px-4 bg-dark">
             <div class="d-flex align-items-center gap-3">
@@ -28,7 +29,7 @@
         </div>
 
         <div id="contentChatMessages" class="card-body bg-dark text-white overflow-auto"
-            style="height:70vh; background: radial-gradient(circle at center, rgba(255, 255, 255, 0.0) 0%, transparent 100%), linear-gradient(145deg, #0b0b0b, #252424); background-repeat: no-repeat; background-attachment: fixed; background-size: cover; background-position: center;">
+            style="height:70vh; padding-bottom:120px; background: radial-gradient(circle at center, rgba(255, 255, 255, 0.0) 0%, transparent 100%), linear-gradient(145deg, #0b0b0b, #252424); background-repeat: no-repeat; background-attachment: fixed; background-size: cover; background-position: center;">
             <div id="bienvenidaChat" class="text-center small mt-3">
                 Bienvenido a soylio IA
                 <button id="btnLimpiarChat" class="btn text-white position-fixed btn-pulso"
@@ -45,7 +46,10 @@
             </div>
         </div>
 
-        <div class="position-sticky bottom-0 p-3 bg-dark" style="z-index: 10;">
+        <!--         <div id="chatInputBar" class="position-sticky bottom-0 p-3 bg-dark" style="z-index: 10;">-->
+        <div id="chatInputBar" class="position-absolute bottom-0 start-50 translate-middle-x p-3 bg-dark w-100"
+            style="z-index: 3000;">
+
             <div class="d-flex justify-content-center align-items-center gap-3 text-dark">
                 <div class="d-flex gap-2">
                     <input type="file" id="inputArchivo" hidden>
