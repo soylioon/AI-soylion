@@ -1,137 +1,113 @@
-    /**
-    * styles generales del chat
-    */
-    .chat-send-btn:hover {
-        background-color: #0d6efd !important;
-        color: white !important;
-        transition: background-color 0.3s ease;
+/* *
+*  css general del chat
+*/
+
+.chat-send-btn:hover {
+    background-color: #0d6efd !important;
+    color: #fff !important;
+    transition: background-color .3s ease;
+}
+
+.icon-btn:hover i {
+    transform: scale(1.1);
+}
+
+.icon-btn:focus {
+    box-shadow: none !important;
+}
+
+.chat-message {
+    animation: fadeInUp .25s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
     }
 
-    .icon-btn:hover i {
-        transform: scale(1.1);
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.btn-pulso:hover {
+    color: #fc2929 !important;
+    transform: scale(1.25);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        filter: brightness(1);
     }
 
-    .icon-btn:focus {
-        box-shadow: none !important;
+    50% {
+        transform: scale(1.18);
+        filter: brightness(1.25);
     }
 
-    /**
-    * animacion chat
-    */
-    .chat-message {
-        animation: fadeInUp 0.25s ease;
+    100% {
+        transform: scale(1);
+        filter: brightness(1);
+    }
+}
+
+/* *
+*  para Tablets
+*/
+@media (max-width: 992px) {
+    #chatBox {
+        width: 90vw !important;
+        height: 90vh !important;
+    }
+}
+
+
+/* *
+*  para celulares
+*/
+@media (max-width: 768px) {
+    #chatBox {
+        width: 100vw !important;
+        height: 100vh !important;
+        border-radius: 0 !important;
     }
 
-    @keyframes fadeInUp {
-        from {
-            opacity: 0;
-            transform: translateY(10px);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
+    #contentChatMessages {
+        height: 70vh !important;
     }
 
-    /* *
-    * animation de btn limpiar
-     */
-    .btn-pulso:hover {
-        color: #fc2929 !important;
-        transform: scale(1.25);
+    .input-group input {
+        font-size: .9rem;
     }
 
-    @keyframes pulse {
-        0% {
-            transform: scale(1);
-            filter: brightness(1);
-        }
-
-        50% {
-            transform: scale(1.18);
-            filter: brightness(1.25);
-        }
-
-        100% {
-            transform: scale(1);
-            filter: brightness(1);
-        }
-    }
-
-
-    /* ----------------------------- */
-    /*  RESPONSIVE CHAT SOYLION AI   */
-    /* ----------------------------- */
-
-    /* Pantallas grandes (por defecto tu diseño queda igual) */
-
-    /**
-    * para tables
-    */
-    @media (max-width: 992px) {
-        #chatBox {
-            width: 90vw !important;
-            height: 90vh !important;
-        }
-
-        .input-group {
-            width: 100% !important;
-            max-width: none !important;
-        }
-    }
-
-    /**
-    * para Celulares
-    */
     @media (max-width: 768px) {
-        #chatBox {
-            width: 100vw !important;
-            height: 100vh !important;
-            border-radius: 0 !important;
-        }
-
-        .card-header img {
-            width: 32px !important;
-            height: 32px !important;
-        }
-
-        .card-header strong {
-            font-size: 1rem !important;
-        }
-
-        #contentChatMessages {
-            height: 70vh !important;
-        }
-
-        .input-group {
-            width: 100% !important;
-            max-width: none !important;
-        }
-
-        .input-group input {
-            font-size: 0.9rem;
+        .btn-pulso {
+            position: fixed !important;
+            right: 2% !important;
+            top: 10% !important;
         }
     }
 
-    /* Celulares pequeños */
-    @media (max-width: 480px) {
-        #chatBox {
-            width: 100vw !important;
-            height: 100vh !important;
-        }
+}
 
-        .d-flex.gap-3 {
-            gap: 8px !important;
-        }
-
-        .input-group input {
-            font-size: 0.85rem !important;
-        }
-
-        #btnFlotante {
-            width: 50px !important;
-            height: 50px !important;
-            padding: 0 !important;
-        }
+/* *
+* para celures pequeños
+*/
+@media (max-width: 480px) {
+    .d-flex.gap-3 {
+        gap: 8px !important;
     }
+
+    .input-group input {
+        font-size: .85rem !important;
+    }
+
+    #btnFlotante {
+        width: 50px !important;
+        height: 50px !important;
+        padding: 0 !important;
+    }
+}
