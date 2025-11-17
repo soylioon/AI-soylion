@@ -54,6 +54,7 @@
     }
 }
 
+
 /* *
 *  para Tablets
 */
@@ -66,9 +67,10 @@
 
 
 /* *
-*  para celulares
+*  para celulares (ESTILO WHATSAPP)
 */
 @media (max-width: 768px) {
+
     #chatBox {
         width: 100vw !important;
         height: 100vh !important;
@@ -77,24 +79,35 @@
 
     #contentChatMessages {
         height: 70vh !important;
+        scroll-behavior: smooth;
+        padding-bottom: 80px;
     }
 
-    .input-group input {
-        font-size: .9rem;
+    /* Input estilo WhatsApp */
+    .input-group {
+        width: 100% !important;
+        max-width: 100% !important;
     }
 
-    @media (max-width: 768px) {
-        .btn-pulso {
-            position: fixed !important;
-            right: 2% !important;
-            top: 10% !important;
-        }
+    #chatInput {
+        font-size: 1rem !important;
+        padding: 12px !important;
     }
 
+    #btnEnviar {
+        padding: 14px !important;
+    }
+
+    .btn-pulso {
+        position: fixed !important;
+        right: 2% !important;
+        top: 10% !important;
+    }
 }
 
+
 /* *
-* para celures pequeños
+* para celulares pequeños
 */
 @media (max-width: 480px) {
     .d-flex.gap-3 {
