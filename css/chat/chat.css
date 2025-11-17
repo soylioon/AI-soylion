@@ -60,87 +60,78 @@
     }
 
 
-    /* Botón flotante */
-    #btnFlotante {
-        width: 60px;
-        height: 60px;
-    }
+    /* ----------------------------- */
+    /*  RESPONSIVE CHAT SOYLION AI   */
+    /* ----------------------------- */
 
-    @media (max-width: 480px) {
-        #btnFlotante {
-            width: 50px;
-            height: 50px;
-            padding: 0.8rem;
+    /* Pantallas grandes (por defecto tu diseño queda igual) */
+
+    /**
+    * para tables
+    */
+    @media (max-width: 992px) {
+        #chatBox {
+            width: 90vw !important;
+            height: 90vh !important;
+        }
+
+        .input-group {
+            width: 100% !important;
+            max-width: none !important;
         }
     }
 
-    /* Caja principal del chat */
-    #chatBox {
-        width: 80vw;
-        height: 90vh;
-    }
-
+    /**
+    * para Celulares
+    */
     @media (max-width: 768px) {
         #chatBox {
-            width: 95vw !important;
-            height: 95vh !important;
-            border-radius: 0.7rem !important;
+            width: 100vw !important;
+            height: 100vh !important;
+            border-radius: 0 !important;
         }
-    }
 
-    /* Header: avatar + texto */
-    @media (max-width: 480px) {
-        #chatBox .card-header img {
+        .card-header img {
             width: 32px !important;
             height: 32px !important;
         }
 
-        #chatBox .card-header strong {
-            font-size: 0.95rem !important;
+        .card-header strong {
+            font-size: 1rem !important;
         }
 
-        #chatBox .card-header span {
-            font-size: 0.7rem !important;
-        }
-
-        #cerrarChat {
-            padding: 3px 6px !important;
-            font-size: 0.75rem !important;
-        }
-    }
-
-    /* Contenedor de mensajes */
-    #contentChatMessages {
-        height: 70vh;
-    }
-
-    @media (max-width: 768px) {
         #contentChatMessages {
-            height: calc(100vh - 150px) !important;
+            height: 70vh !important;
+        }
+
+        .input-group {
+            width: 100% !important;
+            max-width: none !important;
+        }
+
+        .input-group input {
+            font-size: 0.9rem;
         }
     }
 
-    /* Input del mensaje */
-    .input-group {
-        width: 600px;
-        max-width: 90%;
-    }
-
+    /* Celulares pequeños */
     @media (max-width: 480px) {
-        #chatInput {
-            font-size: 0.9rem !important;
-            padding-left: 1rem !important;
+        #chatBox {
+            width: 100vw !important;
+            height: 100vh !important;
         }
 
-        .chat-send-btn {
-            padding: 0.7rem 1rem !important;
+        .d-flex.gap-3 {
+            gap: 8px !important;
         }
-    }
 
-    /* Botón limpiar */
-    @media (max-width: 480px) {
-        #btnLimpiarChat {
-            top: 16% !important;
-            right: 4% !important;
+        .input-group input {
+            font-size: 0.85rem !important;
+        }
+
+        #btnFlotante {
+            width: 50px !important;
+            height: 50px !important;
+            padding: 0 !important;
         }
     }
