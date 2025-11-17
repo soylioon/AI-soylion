@@ -155,6 +155,7 @@ function inicializarChat() {
     }
 
     function mostrarEscribiendo() {
+        mostrarEscribiendoDiv.style.position = 'fixed';
         mostrarEscribiendoDiv.classList.remove("d-none");
     }
 

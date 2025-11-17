@@ -89,3 +89,21 @@
         height: calc(100vh - 70px - 90px) !important;
     }
 }
+
+/* *
+* adatado pora IOS
+ */
+#mostrarEscribiendo {
+    position: fixed;
+    bottom: calc(90px + env(safe-area-inset-bottom));
+    right: 10px;
+    z-index: 2000;
+    color: white;
+    font-size: 0.85rem;
+}
+
+#contentChatMessages {
+    overflow-y: auto;
+    height: calc(100vh - 70px - 90px);
+    padding-bottom: 120px;
+}
